@@ -1,6 +1,6 @@
 # Lecture 03 — Boolean Algebra and Logic Gates
 
-> **Last Updated:** 2026-10-07
+> **Last Updated:** 2026-10-08
 >
 > Digital Design, Mano and Ciletti - Ch 2
 
@@ -200,9 +200,9 @@ F₂ can be simplified algebraically:
 | = $x'z \cdot 1$ + xy' | y' + y = 1 (complement) |
 | = x'z + xy' | Identity |
 
-![Lecture 03, Slide 6 — Gate implementations of F₁ = x + y'z and of F₂ before and after simplification](../images/L03_p06.png)
+![Figure 1. Gate implementations of F₁ = x + y'z and of F₂ before and after simplification (slide 6)](../images/L03_p06.png)
 
-*Lecture 03, Slide 6 — Gate implementations of F₁ = x + y'z and of F₂ before and after simplification*
+*Figure 1. Gate implementations of F₁ = x + y'z and of F₂ before and after simplification (slide 6)*
 
 - **Top:** F₁ needs one inverter (to form y'), one AND gate (y'z), and one OR gate.
 - **(a) F₂ = x'y'z + x'yz + xy':** two inverters, three AND gates (two with three inputs), and a three-input OR gate.
@@ -389,9 +389,9 @@ The complement of a function consists of exactly the minterms that are missing f
 - F(x, y, z) = Σ(1, 3, 6, 7)
 - F(x, y, z) = Π(0, 2, 4, 5)
 
-![Lecture 03, Slide 13 — Minterms and maxterms of F = xy + x'z read from the truth table](../images/L03_p13.png)
+![Figure 2. Minterms and maxterms of F = xy + x'z read from the truth table (slide 13)](../images/L03_p13.png)
 
-*Lecture 03, Slide 13 — Minterms and maxterms of F = xy + x'z read from the truth table*
+*Figure 2. Minterms and maxterms of F = xy + x'z read from the truth table (slide 13)*
 
 In the figure, arrows connect each row of the truth table with F = 1 to the label "Minterms," and each row with F = 0 to the label "Maxterms," showing that the two lists together cover all eight rows exactly once.
 
@@ -402,9 +402,9 @@ The canonical forms contain every variable in every term, which is rarely the si
 - **Sum of products (SOP):** an OR of AND terms, for example F₁ = y' + xy + x'yz'.
 - **Product of sums (POS):** an AND of OR terms, for example F₂ = x(y' + z)(x' + y + z').
 
-![Lecture 03, Slide 14 — Two-level implementations of a sum of products and a product of sums](../images/L03_p14a.png)
+![Figure 3. Two-level implementations of a sum of products and a product of sums (slide 14)](../images/L03_p14a.png)
 
-*Lecture 03, Slide 14 — Two-level implementations of a sum of products and a product of sums*
+*Figure 3. Two-level implementations of a sum of products and a product of sums (slide 14)*
 
 - (a) **Sum of products:** a first level of AND gates (x'yz' and xy) feeds a second-level OR gate together with the single literal y'.
 - (b) **Product of sums:** a first level of OR gates (y' + z and x' + y + z') feeds a second-level AND gate together with the single literal x.
@@ -413,9 +413,9 @@ Both are **two-level implementations**: every path from an input to the output p
 
 **Example:** F₃ = AB + C(D + E) = AB + CD + CE.
 
-![Lecture 03, Slide 14 — Three-level and two-level implementations of F₃](../images/L03_p14b.png)
+![Figure 4. Three-level and two-level implementations of F₃ (slide 14)](../images/L03_p14b.png)
 
-*Lecture 03, Slide 14 — Three-level and two-level implementations of F₃*
+*Figure 4. Three-level and two-level implementations of F₃ (slide 14)*
 
 - (a) AB + C(D + E) is a **three-level** implementation: an OR gate (D + E), then an AND gate with C, then the final OR gate.
 - (b) AB + CD + CE is the equivalent **two-level** SOP implementation, obtained by applying the distributive law.
@@ -439,9 +439,9 @@ The AND gate outputs 1 only when **all** inputs are 1.
 | 1 | 0 | 0 |
 | 1 | 1 | 1 |
 
-![Lecture 03, Slide 15 — Two-input, three-input, and four-input AND gates](../images/L03_p15.png)
+![Figure 5. Two-input, three-input, and four-input AND gates (slide 15)](../images/L03_p15.png)
 
-*Lecture 03, Slide 15 — Two-input, three-input, and four-input AND gates*
+*Figure 5. Two-input, three-input, and four-input AND gates (slide 15)*
 
 AND gates can have more than two inputs. A three-input AND gate outputs p = xyz, and a four-input AND gate outputs p = wxyz; in each case the output is 1 only when every input is 1.
 
@@ -456,9 +456,9 @@ The OR gate outputs 1 when **at least one** input is 1.
 | 1 | 0 | 1 |
 | 1 | 1 | 1 |
 
-![Lecture 03, Slide 16 — Two-input, three-input, and four-input OR gates](../images/L03_p16.png)
+![Figure 6. Two-input, three-input, and four-input OR gates (slide 16)](../images/L03_p16.png)
 
-*Lecture 03, Slide 16 — Two-input, three-input, and four-input OR gates*
+*Figure 6. Two-input, three-input, and four-input OR gates (slide 16)*
 
 The two-input OR gate outputs s = x + y, the three-input gate p = x + y + z, and the four-input gate t = w + x + y + z.
 
@@ -471,9 +471,9 @@ The NOT gate (inverter) outputs the complement of its input.
 | 0 | 1 |
 | 1 | 0 |
 
-![Lecture 03, Slide 17 — Two equivalent symbols of the NOT gate](../images/L03_p17.png)
+![Figure 7. Two equivalent symbols of the NOT gate (slide 17)](../images/L03_p17.png)
 
-*Lecture 03, Slide 17 — Two equivalent symbols of the NOT gate*
+*Figure 7. Two equivalent symbols of the NOT gate (slide 17)*
 
 The bubble that marks inversion can be drawn either at the output (left symbol) or at the input (right symbol). Both symbols represent the same inverter with output X'. Placing the bubble at the input is useful when a diagram should emphasize that the input signal is active-low.
 
@@ -488,9 +488,9 @@ The bubble that marks inversion can be drawn either at the output (left symbol) 
 | 1 | 0 | 1 |
 | 1 | 1 | 0 |
 
-![Lecture 03, Slide 18 — NAND function drawn with AND and NOT symbols, and the NAND gate symbols](../images/L03_p18.png)
+![Figure 8. NAND function drawn with AND and NOT symbols, and the NAND gate symbols (slide 18)](../images/L03_p18.png)
 
-*Lecture 03, Slide 18 — NAND function drawn with AND and NOT symbols, and the NAND gate symbols*
+*Figure 8. NAND function drawn with AND and NOT symbols, and the NAND gate symbols (slide 18)*
 
 - The top of the slide draws the NAND function as an AND gate followed by an inverter: s = (xy)', also written with an overbar over xy.
 - The NAND gate symbol is an AND symbol with a bubble at the output. A two-input NAND gate gives s = (xy)', a three-input gate t = (xyz)', and a four-input gate u = (wxyz)'.
@@ -506,9 +506,9 @@ The bubble that marks inversion can be drawn either at the output (left symbol) 
 | 1 | 0 | 0 |
 | 1 | 1 | 0 |
 
-![Lecture 03, Slide 19 — NOR function drawn with OR and NOT symbols, and the NOR gate symbols](../images/L03_p19.png)
+![Figure 9. NOR function drawn with OR and NOT symbols, and the NOR gate symbols (slide 19)](../images/L03_p19.png)
 
-*Lecture 03, Slide 19 — NOR function drawn with OR and NOT symbols, and the NOR gate symbols*
+*Figure 9. NOR function drawn with OR and NOT symbols, and the NOR gate symbols (slide 19)*
 
 The NOR gate symbol is an OR symbol with a bubble at the output. A two-input NOR gate gives s = (x + y)', a three-input gate s = (x + y + z)', and a four-input gate u = (w + x + y + z)'.
 
@@ -523,9 +523,9 @@ The NOR gate symbol is an OR symbol with a bubble at the output. A two-input NOR
 | 1 | 0 | 1 |
 | 1 | 1 | 0 |
 
-![Lecture 03, Slide 20 — Two-input XOR gate, and a three-input XOR built from two-input XOR gates](../images/L03_p20.png)
+![Figure 10. Two-input XOR gate, and a three-input XOR built from two-input XOR gates (slide 20)](../images/L03_p20.png)
 
-*Lecture 03, Slide 20 — Two-input XOR gate, and a three-input XOR built from two-input XOR gates*
+*Figure 10. Two-input XOR gate, and a three-input XOR built from two-input XOR gates (slide 20)*
 
 - (a) The XOR symbol is an OR symbol with an extra curved line on the input side; z = x ⊕ y.
 - (b) A three-input XOR is built by feeding the output of one two-input XOR (x ⊕ y) and the third input z into a second XOR: P = x ⊕ y ⊕ z. The result is 1 when an **odd number** of the inputs are 1.
@@ -541,9 +541,9 @@ The NOR gate symbol is an OR symbol with a bubble at the output. A two-input NOR
 | 1 | 0 | 0 |
 | 1 | 1 | 1 |
 
-![Lecture 03, Slide 21 — Two-input XNOR gate, and a three-input XNOR built from an XOR gate and an XNOR gate](../images/L03_p21.png)
+![Figure 11. Two-input XNOR gate, and a three-input XNOR built from an XOR gate and an XNOR gate (slide 21)](../images/L03_p21.png)
 
-*Lecture 03, Slide 21 — Two-input XNOR gate, and a three-input XNOR built from an XOR gate and an XNOR gate*
+*Figure 11. Two-input XNOR gate, and a three-input XNOR built from an XOR gate and an XNOR gate (slide 21)*
 
 - (a) The XNOR symbol is the XOR symbol with an output bubble; z = (x ⊕ y)'.
 - (b) The three-input XNOR feeds x ⊕ y and z into an XNOR gate: P = (x ⊕ y ⊕ z)'. Only the **last** gate carries the inversion; inverting both stages would cancel out.
@@ -570,9 +570,9 @@ The NOR gate symbol is an OR symbol with a bubble at the output. A two-input NOR
 
 ### 6.1 Associativity
 
-![Lecture 03, Slide 22 — Associativity of the three-variable AND and OR functions](../images/L03_p22.png)
+![Figure 12. Associativity of the three-variable AND and OR functions (slide 22)](../images/L03_p22.png)
 
-*Lecture 03, Slide 22 — Associativity of the three-variable AND and OR functions*
+*Figure 12. Associativity of the three-variable AND and OR functions (slide 22)*
 
 - **AND:** computing xy first and then ANDing with z gives (xy)z; computing yz first and then ANDing with x gives x(yz). Both circuits produce the same output.
 - **OR:** (x + y) + z and x + (y + z) likewise produce the same output.
@@ -583,9 +583,9 @@ Because of associativity, the order of grouping does not matter. This is exactly
 
 ### 6.2 Distributivity
 
-![Lecture 03, Slide 23 — Logic diagrams illustrating the two distributive laws](../images/L03_p23.png)
+![Figure 13. Logic diagrams illustrating the two distributive laws (slide 23)](../images/L03_p23.png)
 
-*Lecture 03, Slide 23 — Logic diagrams illustrating the two distributive laws*
+*Figure 13. Logic diagrams illustrating the two distributive laws (slide 23)*
 
 - **x(y + z) = xy + xz:** diagram (a) computes y + z with an OR gate and ANDs the result with x; diagram (b) redistributes the expression into two AND gates (xy and xz) followed by an OR gate.
 - **x + yz = (x + y)(x + z):** diagram (a) computes yz with an AND gate and ORs the result with x; diagram (b) redistributes it into two OR gates (x + y and x + z) followed by an AND gate.
@@ -602,9 +602,9 @@ A set of operations is **functionally complete** if **every** Boolean function c
 
 ### 7.1 NAND and NOR Gates as Inverters
 
-![Lecture 03, Slide 24 — NAND gate and NOR gate used as inverters](../images/L03_p24.png)
+![Figure 14. NAND gate and NOR gate used as inverters (slide 24)](../images/L03_p24.png)
 
-*Lecture 03, Slide 24 — NAND gate and NOR gate used as inverters*
+*Figure 14. NAND gate and NOR gate used as inverters (slide 24)*
 
 - **(a) NAND as an inverter.**
   - Tie one input to logic "1" (the supply voltage $V_{CC}$ through a resistor): $(x \cdot 1)' = x'$.
@@ -615,9 +615,9 @@ A set of operations is **functionally complete** if **every** Boolean function c
 
 ### 7.2 AND and OR Functions with NAND Gates
 
-![Lecture 03, Slide 25 — AND and OR functions built from NAND gates](../images/L03_p25.png)
+![Figure 15. AND and OR functions built from NAND gates (slide 25)](../images/L03_p25.png)
 
-*Lecture 03, Slide 25 — AND and OR functions built from NAND gates*
+*Figure 15. AND and OR functions built from NAND gates (slide 25)*
 
 - **(a) AND:** the first NAND gate produces (xy)'. The second NAND gate, with both inputs connected to (xy)', acts as an inverter and produces ((xy)')' = xy. The slide draws this second gate as an OR gate with bubbles on both inputs, which is the same gate as a NAND by De Morgan's theorem: x' + y' = (xy)'.
 - **(b) OR:** two NAND gates used as inverters produce x' and y'. A third NAND gate (again drawn as invert-OR) produces (x'y')' = x + y, by De Morgan's theorem.

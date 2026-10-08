@@ -1,6 +1,6 @@
 # Lecture 05 — Verilog HDL Design
 
-> **Last Updated:** 2026-10-07
+> **Last Updated:** 2026-10-08
 >
 > Digital Design, Mano and Ciletti - Ch 3, 4, 7
 
@@ -98,9 +98,9 @@ As integrated circuits grew from a few hundred gates to hundreds of thousands of
 
 ### 1.2 Typical Design Flow of an Integrated Circuit
 
-![Lecture 05, Slide 3 — Typical design flow of an integrated circuit](../images/L05_p03.png)
+![Figure 1. Typical design flow of an integrated circuit (slide 3)](../images/L05_p03.png)
 
-*Lecture 05, Slide 3 — Typical design flow of an integrated circuit*
+*Figure 1. Typical design flow of an integrated circuit (slide 3)*
 
 The flow proceeds from top to bottom.
 
@@ -129,9 +129,9 @@ The flow proceeds from top to bottom.
 
 ### 2.1 Digital Logic Technologies
 
-![Lecture 05, Slide 4 — Classification of digital logic technologies](../images/L05_p04.png)
+![Figure 2. Classification of digital logic technologies (slide 4)](../images/L05_p04.png)
 
-*Lecture 05, Slide 4 — Classification of digital logic technologies*
+*Figure 2. Classification of digital logic technologies (slide 4)*
 
 | Category | Members | Description |
 |:---------|:--------|:------------|
@@ -160,9 +160,9 @@ Programmable devices are built from the same two-level structure studied earlier
 
 ### 2.3 Technology Trade-offs
 
-![Lecture 05, Slide 6 — Trade-offs among digital logic technologies](../images/L05_p06.png)
+![Figure 3. Trade-offs among digital logic technologies (slide 6)](../images/L05_p06.png)
 
-*Lecture 05, Slide 6 — Trade-offs among digital logic technologies*
+*Figure 3. Trade-offs among digital logic technologies (slide 6)*
 
 - The horizontal axis is the **engineering cost and the time needed to develop a product**.
 - The vertical axis is **speed, density, complexity, and the market volume needed for the product** to be profitable.
@@ -174,9 +174,9 @@ The trade-off is clear: higher performance and density require more development 
 
 The slide shows photographs of commercial FPGA chips: the **Altera Arria V SoC**, the **Xilinx Artix-7** (XC7A100T), the **Microsemi SmartFusion2**, and the **Lattice ECP3**, together with an illustration of the many functional blocks inside an FPGA.
 
-![Lecture 05, Slide 7 — Examples of commercial FPGA chips](../images/L05_p07.png)
+![Figure 4. Examples of commercial FPGA chips (slide 7)](../images/L05_p07.png)
 
-*Lecture 05, Slide 7 — Examples of commercial FPGA chips*
+*Figure 4. Examples of commercial FPGA chips (slide 7)*
 
 > **Note:** Altera was acquired by Intel in 2015, which is why the Altera FPGA families and the Quartus design software are now distributed under the Intel brand. Xilinx was acquired by AMD in 2022.
 
@@ -188,9 +188,9 @@ The slide shows photographs of commercial FPGA chips: the **Altera Arria V SoC**
 
 ### 3.1 HDL Design Compared with Computer Programming
 
-![Lecture 05, Slide 8 — Comparison of HDL design and computer programming](../images/L05_p08.png)
+![Figure 5. Comparison of HDL design and computer programming (slide 8)](../images/L05_p08.png)
 
-*Lecture 05, Slide 8 — Comparison of HDL design and computer programming*
+*Figure 5. Comparison of HDL design and computer programming (slide 8)*
 
 | Hardware Design | Computer Programming |
 |:----------------|:---------------------|
@@ -266,17 +266,17 @@ A **module** is the basic design block used to implement hardware. A design is b
 - **lower (sub) modules**, which are used inside other modules, and
 - the **test bench module**, which applies inputs to the design for simulation.
 
-![Lecture 05, Slide 12 — Module hierarchy drawn as a tree and as nested blocks](../images/L05_p12.png)
+![Figure 6. Module hierarchy drawn as a tree and as nested blocks (slide 12)](../images/L05_p12.png)
 
-*Lecture 05, Slide 12 — Module hierarchy drawn as a tree and as nested blocks*
+*Figure 6. Module hierarchy drawn as a tree and as nested blocks (slide 12)*
 
 The left drawing shows the hierarchy as a tree: the top module contains module 1 and module 2, and module 2 contains modules 3, 4, and 5. The right drawing shows the same design as nested blocks with signals flowing between them: the top-level inputs enter modules 1 and 3, module 3 drives modules 4 and 5, and modules 1, 4, and 5 produce the top-level outputs.
 
 ### 4.2 Structure of a Module
 
-![Lecture 05, Slide 13 — Structure of a Verilog module](../images/L05_p13.png)
+![Figure 7. Structure of a Verilog module (slide 13)](../images/L05_p13.png)
 
-*Lecture 05, Slide 13 — Structure of a Verilog module*
+*Figure 7. Structure of a Verilog module (slide 13)*
 
 The figure marks two syntax details in red: the module header ends with a **semicolon**, and `endmodule` takes **no semicolon**. The blue box holds the declarations, and the pink box holds the description of the circuit. Written as code, the structure is as follows.
 
@@ -345,9 +345,9 @@ The notation `[7:0]` declares an 8-bit bus whose bits are numbered 7 (the MSB) d
 
 A **net** represents a **physical connection** between hardware blocks, like a wire on a circuit board. A net has no storage: its value is always whatever is driving it.
 
-![Lecture 05, Slide 16 — Nets connecting functional blocks, and a wire declared inside a module](../images/L05_p16.png)
+![Figure 8. Nets connecting functional blocks, and a wire declared inside a module (slide 16)](../images/L05_p16.png)
 
-*Lecture 05, Slide 16 — Nets connecting functional blocks, and a wire declared inside a module*
+*Figure 8. Nets connecting functional blocks, and a wire declared inside a module (slide 16)*
 
 In the upper drawing, nets carry signals into, between, and out of functional blocks. The slide lists four common net types: `wire`, `tri`, `supply0`, and `supply1`. The most frequently used is `wire`, and the code below (the lower part of the figure) declares an internal 16-bit wire.
 
@@ -528,9 +528,9 @@ endmodule
 
 An instance is a block made by calling a module that has already been made. Four instances of a 1-bit full adder (FA) form a 4-bit adder.
 
-![Lecture 05, Slide 25 — A 1-bit full adder module and four instances forming a 4-bit adder](../images/L05_p25.png)
+![Figure 9. A 1-bit full adder module and four instances forming a 4-bit adder (slide 25)](../images/L05_p25.png)
 
-*Lecture 05, Slide 25 — A 1-bit full adder module and four instances forming a 4-bit adder*
+*Figure 9. A 1-bit full adder module and four instances forming a 4-bit adder (slide 25)*
 
 - The 1-bit FA module has inputs A, B, and C_in and outputs S and C_out.
 - In the 4-bit adder, FA0 adds A[0] and B[0]; its carry-out feeds the carry-in of FA1, and so on up to FA3, whose carry-out is the final carry. This chain is called a **ripple-carry adder**.
@@ -736,9 +736,9 @@ endmodule
 - The four `initial` blocks run **concurrently**, each with its own timeline. Therefore x is set at 10 ns and y at 10 + 25 = 35 ns, independently of the second block.
 - `$finish` stops the simulation at 50 ns.
 
-![Lecture 05, Slide 38 — Waveform of the initial statement example](../images/L05_p38.png)
+![Figure 10. Waveform of the initial statement example (slide 38)](../images/L05_p38.png)
 
-*Lecture 05, Slide 38 — Waveform of the initial statement example*
+*Figure 10. Waveform of the initial statement example (slide 38)*
 
 The waveform window lists the signals x, y, a, b, and m. Each signal is unknown (`X`) until it is first assigned, and then it takes its assigned value: m is 0 from the start, a becomes 1 at 5 ns, x becomes 0 at 10 ns, b becomes 0 at 30 ns, y becomes 1 at 35 ns, and the simulation stops at the 50 ns marker.
 
@@ -793,9 +793,9 @@ module ADD_4bit(out, in1, in2);
 endmodule
 ```
 
-![Lecture 05, Slide 41 — Simulation waveform of the 4-bit adder](../images/L05_p41.png)
+![Figure 11. Simulation waveform of the 4-bit adder (slide 41)](../images/L05_p41.png)
 
-*Lecture 05, Slide 41 — Simulation waveform of the 4-bit adder*
+*Figure 11. Simulation waveform of the 4-bit adder (slide 41)*
 
 The block runs whenever `in1` or `in2` changes. The waveform shows four successive intervals:
 
@@ -823,9 +823,9 @@ module clock_test;
 endmodule
 ```
 
-![Lecture 05, Slide 42 — Waveform of the clock generator](../images/L05_p42.png)
+![Figure 12. Waveform of the clock generator (slide 42)](../images/L05_p42.png)
 
-*Lecture 05, Slide 42 — Waveform of the clock generator*
+*Figure 12. Waveform of the clock generator (slide 42)*
 
 The `always` block waits 10 time units, inverts the clock, and repeats. The clock is therefore 0 from 0 to 10, 1 from 10 to 20, 0 from 20 to 30, 1 from 30 to 40, and 0 from 40 to 50, where the simulation stops: a square wave with a period of 20 time units. This is the standard way to generate a clock in a test bench.
 
@@ -904,9 +904,9 @@ Both orders give the same result, because every right side reads the **old** val
 
 > **Note:** The slide declares A, B, C, and D as `wire [3:0]`. A signal assigned inside an `always` block must be declared `reg`, so in working code these should be `reg [3:0] A, B, C, D;`.
 
-![Lecture 05, Slide 47 — Difference between blocking and nonblocking assignments](../images/L05_p47.png)
+![Figure 13. Difference between blocking and nonblocking assignments (slide 47)](../images/L05_p47.png)
 
-*Lecture 05, Slide 47 — Difference between blocking and nonblocking assignments*
+*Figure 13. Difference between blocking and nonblocking assignments (slide 47)*
 
 - **Combinational circuits:** blocking (`=`).
 - **Sequential circuits:** nonblocking (`<=`).
@@ -1288,9 +1288,9 @@ From the highest priority (evaluated first) to the lowest:
 
 ## 12. Summary of a Verilog Module
 
-![Lecture 05, Slide 66 — Summary of the elements of a Verilog HDL module](../images/L05_p66.png)
+![Figure 14. Summary of the elements of a Verilog HDL module (slide 66)](../images/L05_p66.png)
 
-*Lecture 05, Slide 66 — Summary of the elements of a Verilog HDL module*
+*Figure 14. Summary of the elements of a Verilog HDL module (slide 66)*
 
 The figure summarizes what can appear inside a module and which data types are allowed where.
 

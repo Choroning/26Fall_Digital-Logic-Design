@@ -1,6 +1,6 @@
 # Lecture 02 — Digital Systems and Binary Numbers
 
-> **Last Updated:** 2026-10-07
+> **Last Updated:** 2026-10-08
 >
 > Digital Design, Mano and Ciletti - Ch 1
 
@@ -62,9 +62,9 @@
 - A **digital signal** is a signal expressed **discretely**. It exists only at separate points (in time) and takes only a limited set of values.
 - **Encoding** means changing the way a signal is represented, for example turning a voltage into a sequence of binary codes.
 
-![Lecture 02, Slide 2 — Analog and digital representations of a signal](../images/L02_p02.png)
+![Figure 1. Analog and digital representations of a signal (slide 2)](../images/L02_p02.png)
 
-*Lecture 02, Slide 2 — Analog and digital representations of a signal*
+*Figure 1. Analog and digital representations of a signal (slide 2)*
 
 In panel (a), a sine wave rises smoothly from 0 to +V, falls through 0 at π to -V, and returns to 0 at 2π; the voltage is defined at every instant. In panel (b), the same wave is represented only at 17 equally spaced time points labeled 0 to 16, drawn as vertical bars. Between the bars, no value is recorded. This is the essence of a digital representation: a finite list of numbers replaces a continuous curve.
 
@@ -585,9 +585,9 @@ In the **Gray code**, two consecutive code words differ in **exactly one bit**. 
 | 6 | 0101 | 14 | 1001 |
 | 7 | 0100 | 15 | 1000 |
 
-![Lecture 02, Slide 17 — Reflected structure of the 3-bit and 4-bit Gray codes](../images/L02_p17.png)
+![Figure 2. Reflected structure of the 3-bit and 4-bit Gray codes (slide 17)](../images/L02_p17.png)
 
-*Lecture 02, Slide 17 — Reflected structure of the 3-bit and 4-bit Gray codes*
+*Figure 2. Reflected structure of the 3-bit and 4-bit Gray codes (slide 17)*
 
 The figure explains why the Gray code is called a **reflected code**. The arrows connect rows that mirror each other.
 
@@ -606,9 +606,9 @@ Computers also need codes for letters and symbols, called **alphanumeric codes**
 
 The standard is **ASCII** (American Standard Code for Information Interchange), a **7-bit code** that represents 128 characters: 94 printable characters (letters, digits, punctuation), the space, and control characters.
 
-![Lecture 02, Slide 18 — ASCII code table and control characters](../images/L02_p18.png)
+![Figure 3. ASCII code table and control characters (slide 18)](../images/L02_p18.png)
 
-*Lecture 02, Slide 18 — ASCII code table and control characters*
+*Figure 3. ASCII code table and control characters (slide 18)*
 
 **How to read the table:** the three high-order bits $b_7b_6b_5$ select the column and the four low-order bits $b_4b_3b_2b_1$ select the row. For example:
 
@@ -651,9 +651,9 @@ The control characters in the first two columns do not print anything; they cont
 
 A **binary cell** is a device that stores one bit (0 or 1). A **register** is a group of binary cells; a register made of **n cells stores n bits** of binary information. The information stored in a register is meaningful only through how it is interpreted: the same 8 bits can be a number, a character, or part of an instruction.
 
-![Lecture 02, Slide 19 — Transfer of information with registers, and registers in binary information processing](../images/L02_p19.png)
+![Figure 4. Transfer of information with registers, and registers in binary information processing (slide 19)](../images/L02_p19.png)
 
-*Lecture 02, Slide 19 — Transfer of information with registers, and registers in binary information processing*
+*Figure 4. Transfer of information with registers, and registers in binary information processing (slide 19)*
 
 **Left figure: transfer of information with registers.**
 
@@ -707,9 +707,9 @@ Note that binary logic is not binary arithmetic: in OR, 1 + 1 = 1 (not 10), beca
 
 **Logic gates** are the electronic circuits that perform these operations.
 
-![Lecture 02, Slide 20 — Symbols of the two-input AND gate, two-input OR gate, and NOT gate](../images/L02_p20.png)
+![Figure 5. Symbols of the two-input AND gate, two-input OR gate, and NOT gate (slide 20)](../images/L02_p20.png)
 
-*Lecture 02, Slide 20 — Symbols of the two-input AND gate, two-input OR gate, and NOT gate*
+*Figure 5. Symbols of the two-input AND gate, two-input OR gate, and NOT gate (slide 20)*
 
 - (a) The **AND gate** has a flat input side and a rounded output side; it outputs $z = x \cdot y$.
 - (b) The **OR gate** has a curved input side and a pointed output side; it outputs z = x + y.
@@ -719,9 +719,9 @@ Note that binary logic is not binary arithmetic: in OR, 1 + 1 = 1 (not 10), beca
 
 A **timing diagram** shows how signals change over time. Time runs from left to right, a high line means 1, and a low line means 0.
 
-![Lecture 02, Slide 21 — Input and output signals of logic gates](../images/L02_p21.png)
+![Figure 6. Input and output signals of logic gates (slide 21)](../images/L02_p21.png)
 
-*Lecture 02, Slide 21 — Input and output signals of logic gates*
+*Figure 6. Input and output signals of logic gates (slide 21)*
 
 The diagram divides time into five intervals. Reading each column applies the truth tables above:
 

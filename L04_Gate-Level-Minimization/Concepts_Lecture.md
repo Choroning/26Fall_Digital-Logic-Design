@@ -1,6 +1,6 @@
 # Lecture 04 — Gate-Level Minimization
 
-> **Last Updated:** 2026-10-07
+> **Last Updated:** 2026-10-08
 >
 > Digital Design, Mano and Ciletti - Ch 3
 
@@ -63,9 +63,9 @@ $$
 
 (a) **"The complement of a product equals the sum of the complements."** The complement of two or more ANDed variables is equivalent to the OR of the complements of the individual variables.
 
-![Lecture 04, Slide 2 — De Morgan's theorem (a): a NAND gate is equivalent to an OR gate with inverted inputs](../images/L04_p02a.png)
+![Figure 1. De Morgan's theorem (a): a NAND gate is equivalent to an OR gate with inverted inputs (slide 2)](../images/L04_p02a.png)
 
-*Lecture 04, Slide 2 — De Morgan's theorem (a): a NAND gate is equivalent to an OR gate with inverted inputs*
+*Figure 1. De Morgan's theorem (a): a NAND gate is equivalent to an OR gate with inverted inputs (slide 2)*
 
 | A | B | (AB)' | A' + B' |
 |:-:|:-:|:-----:|:-------:|
@@ -76,9 +76,9 @@ $$
 
 (b) **"The complement of a sum equals the product of the complements."** The complement of two or more ORed variables is equivalent to the AND of the complements of the individual variables.
 
-![Lecture 04, Slide 2 — De Morgan's theorem (b): a NOR gate is equivalent to an AND gate with inverted inputs](../images/L04_p02b.png)
+![Figure 2. De Morgan's theorem (b): a NOR gate is equivalent to an AND gate with inverted inputs (slide 2)](../images/L04_p02b.png)
 
-*Lecture 04, Slide 2 — De Morgan's theorem (b): a NOR gate is equivalent to an AND gate with inverted inputs*
+*Figure 2. De Morgan's theorem (b): a NOR gate is equivalent to an AND gate with inverted inputs (slide 2)*
 
 | A | B | (A + B)' | A'B' |
 |:-:|:-:|:--------:|:----:|
@@ -126,18 +126,18 @@ The idea behind every K-map simplification is the identity **xy + xy' = x(y + y'
 
 A function of two variables x and y has four minterms, so the map has four squares.
 
-![Lecture 04, Slide 5 — Two-variable map: minterm positions and the corresponding terms](../images/L04_p05a.png)
+![Figure 3. Two-variable map: minterm positions and the corresponding terms (slide 5)](../images/L04_p05a.png)
 
-*Lecture 04, Slide 5 — Two-variable map: minterm positions and the corresponding terms*
+*Figure 3. Two-variable map: minterm positions and the corresponding terms (slide 5)*
 
 - In panel (a), the squares are numbered m₀ to m₃.
 - In panel (b), the row shows the value of x (0 or 1) and the column shows the value of y (0 or 1). The square in row x = 1 and column y = 1 is m₃ = xy, and so on: m₀ = x'y', m₁ = x'y, m₂ = xy', m₃ = xy.
 
 **Example:** the function that is 1 for the minterms m₁ + m₂ + m₃ = x'y + xy' + xy.
 
-![Lecture 04, Slide 5 — Representation of xy and x + y in the two-variable map](../images/L04_p05b.png)
+![Figure 4. Representation of xy and x + y in the two-variable map (slide 5)](../images/L04_p05b.png)
 
-*Lecture 04, Slide 5 — Representation of xy and x + y in the two-variable map*
+*Figure 4. Representation of xy and x + y in the two-variable map (slide 5)*
 
 - (a) The function xy is a single 1 in square m₃.
 - (b) For m₁ + m₂ + m₃, the two squares of the bottom row (m₂, m₃) form the group **x**, because x = 1 in both and y changes. The two squares of the right column (m₁, m₃) form the group **y**. Square m₃ may be used in both groups. Therefore x'y + xy' + xy = **x + y**.
@@ -152,9 +152,9 @@ A function of two variables x and y has four minterms, so the map has four squar
 
 A three-variable function has eight minterms. The map has two rows (x = 0, 1) and four columns (yz).
 
-![Lecture 04, Slide 6 — Three-variable map: minterm positions and the corresponding terms](../images/L04_p06.png)
+![Figure 5. Three-variable map: minterm positions and the corresponding terms (slide 6)](../images/L04_p06.png)
 
-*Lecture 04, Slide 6 — Three-variable map: minterm positions and the corresponding terms*
+*Figure 5. Three-variable map: minterm positions and the corresponding terms (slide 6)*
 
 The columns are **not** in binary order 00, 01, 10, 11. They follow the order **00, 01, 11, 10**, which is the Gray code, so that **only one bit changes between neighboring columns**. As a result, the minterms in the top row are m₀, m₁, m₃, m₂ and those in the bottom row are m₄, m₅, m₇, m₆.
 
@@ -186,9 +186,9 @@ These rules apply to all K-maps.
 
 **Example 1: F(x, y, z) = Σ(2, 3, 4, 5).**
 
-![Lecture 04, Slide 7 — Map for F(x, y, z) = Σ(2, 3, 4, 5)](../images/L04_p07a.png)
+![Figure 6. Map for F(x, y, z) = Σ(2, 3, 4, 5) (slide 7)](../images/L04_p07a.png)
 
-*Lecture 04, Slide 7 — Map for F(x, y, z) = Σ(2, 3, 4, 5)*
+*Figure 6. Map for F(x, y, z) = Σ(2, 3, 4, 5) (slide 7)*
 
 - m₂ and m₃ are in the top row (x = 0) and in the region y = 1, while z changes: the group is **x'y**.
 - m₄ and m₅ are in the bottom row (x = 1) and in the region y = 0, while z changes: the group is **xy'**.
@@ -196,9 +196,9 @@ These rules apply to all K-maps.
 
 **Example 2: F(x, y, z) = Σ(3, 4, 6, 7).**
 
-![Lecture 04, Slide 7 — Map for F(x, y, z) = Σ(3, 4, 6, 7)](../images/L04_p07b.png)
+![Figure 7. Map for F(x, y, z) = Σ(3, 4, 6, 7) (slide 7)](../images/L04_p07b.png)
 
-*Lecture 04, Slide 7 — Map for F(x, y, z) = Σ(3, 4, 6, 7)*
+*Figure 7. Map for F(x, y, z) = Σ(3, 4, 6, 7) (slide 7)*
 
 - m₃ and m₇ form the column yz = 11, where y = 1 and z = 1 while x changes: the group is **yz**.
 - m₄ and m₆ are in the bottom row at the two outer columns (yz = 00 and 10), which are adjacent by wrap-around. There x = 1 and z = 0 while y changes: the group is **xz'**. Algebraically, xy'z' + xyz' = xz'(y' + y) = xz'.
@@ -206,9 +206,9 @@ These rules apply to all K-maps.
 
 **Example 3: F(x, y, z) = Σ(0, 2, 4, 5, 6).**
 
-![Lecture 04, Slide 8 — Map for F(x, y, z) = Σ(0, 2, 4, 5, 6)](../images/L04_p08a.png)
+![Figure 8. Map for F(x, y, z) = Σ(0, 2, 4, 5, 6) (slide 8)](../images/L04_p08a.png)
 
-*Lecture 04, Slide 8 — Map for F(x, y, z) = Σ(0, 2, 4, 5, 6)*
+*Figure 8. Map for F(x, y, z) = Σ(0, 2, 4, 5, 6) (slide 8)*
 
 - m₀, m₂, m₄, m₆ occupy the two outer columns in both rows, a four-square group by wrap-around. Only z = 0 is constant: the group is **z'**. (The slide notes y'z' + yz' = z'.)
 - m₅ is still uncovered. The largest group containing it is m₄ and m₅ (bottom row, y = 0): **xy'**.
@@ -219,9 +219,9 @@ These rules apply to all K-maps.
 - A'C covers m₁ and m₃; A'B covers m₂ and m₃; AB'C is m₅; BC covers m₃ and m₇.
 - Therefore F(A, B, C) = Σ(1, 2, 3, 5, 7).
 
-![Lecture 04, Slide 8 — Map for F = A'C + A'B + AB'C + BC](../images/L04_p08b.png)
+![Figure 9. Map for F = A'C + A'B + AB'C + BC (slide 8)](../images/L04_p08b.png)
 
-*Lecture 04, Slide 8 — Map for F = A'C + A'B + AB'C + BC*
+*Figure 9. Map for F = A'C + A'B + AB'C + BC (slide 8)*
 
 - The four squares m₁, m₃, m₅, m₇ form the middle two columns, where C = 1: the group is **C**.
 - m₂ remains; together with m₃ it forms **A'B**.
@@ -239,9 +239,9 @@ These rules apply to all K-maps.
 
 A four-variable function (w, x, y, z) has 16 minterms. Both the rows (wx) and the columns (yz) follow the Gray code order 00, 01, 11, 10.
 
-![Lecture 04, Slide 9 — Four-variable map: minterm positions and the corresponding terms](../images/L04_p09.png)
+![Figure 10. Four-variable map: minterm positions and the corresponding terms (slide 9)](../images/L04_p09.png)
 
-*Lecture 04, Slide 9 — Four-variable map: minterm positions and the corresponding terms*
+*Figure 10. Four-variable map: minterm positions and the corresponding terms (slide 9)*
 
 | wx \ yz | 00 | 01 | 11 | 10 |
 |:-------:|:--:|:--:|:--:|:--:|
@@ -257,9 +257,9 @@ A four-variable function (w, x, y, z) has 16 minterms. Both the rows (wx) and th
 
 **Example 1: F(w, x, y, z) = Σ(0, 1, 2, 4, 5, 6, 8, 9, 12, 13, 14).**
 
-![Lecture 04, Slide 10 — Map for F(w, x, y, z) = Σ(0, 1, 2, 4, 5, 6, 8, 9, 12, 13, 14)](../images/L04_p10.png)
+![Figure 11. Map for F(w, x, y, z) = Σ(0, 1, 2, 4, 5, 6, 8, 9, 12, 13, 14) (slide 10)](../images/L04_p10.png)
 
-*Lecture 04, Slide 10 — Map for F(w, x, y, z) = Σ(0, 1, 2, 4, 5, 6, 8, 9, 12, 13, 14)*
+*Figure 11. Map for F(w, x, y, z) = Σ(0, 1, 2, 4, 5, 6, 8, 9, 12, 13, 14) (slide 10)*
 
 - The two left columns (yz = 00 and 01) are entirely 1: eight squares where y = 0, giving **y'**.
 - The remaining 1s are m₂, m₆, and m₁₄ in the right column. m₂ and m₆ group with m₀ and m₄ across the wrap-around (rows wx = 00 and 01, columns yz = 00 and 10): **w'z'**.
@@ -268,9 +268,9 @@ A four-variable function (w, x, y, z) has 16 minterms. Both the rows (wx) and th
 
 **Example 2: F(A, B, C, D) = A'B'C' + B'CD' + A'BCD' + AB'C'.**
 
-![Lecture 04, Slide 11 — Map for F = A'B'C' + B'CD' + A'BCD' + AB'C'](../images/L04_p11.png)
+![Figure 12. Map for F = A'B'C' + B'CD' + A'BCD' + AB'C' (slide 11)](../images/L04_p11.png)
 
-*Lecture 04, Slide 11 — Map for F = A'B'C' + B'CD' + A'BCD' + AB'C'*
+*Figure 12. Map for F = A'B'C' + B'CD' + A'BCD' + AB'C' (slide 11)*
 
 1. Plot each term: A'B'C' covers m₀ and m₁; B'CD' covers m₂ and m₁₀; A'BCD' is m₆; AB'C' covers m₈ and m₉. The 1s are m₀, m₁, m₂, m₆, m₈, m₉, m₁₀.
 2. The four corners m₀, m₂, m₈, m₁₀ form **B'D'** (the slide notes A'B'C'D' + A'B'CD' = A'B'D', AB'C'D' + AB'CD' = AB'D', and A'B'D' + AB'D' = B'D').
@@ -292,9 +292,9 @@ To choose groups systematically, three terms are defined.
 
 **Example: F(A, B, C, D) = Σ(0, 2, 3, 5, 7, 8, 9, 10, 11, 13, 15).**
 
-![Lecture 04, Slide 12 — Essential prime implicants and the remaining prime implicants](../images/L04_p12.png)
+![Figure 13. Essential prime implicants and the remaining prime implicants (slide 12)](../images/L04_p12.png)
 
-*Lecture 04, Slide 12 — Essential prime implicants and the remaining prime implicants*
+*Figure 13. Essential prime implicants and the remaining prime implicants (slide 12)*
 
 **(a) Essential prime implicants.**
 
@@ -331,9 +331,9 @@ Choosing one from each pair gives **four equally minimal expressions**:
 
 A five-variable map (A, B, C, D, E) has 32 squares. It is drawn as **two four-variable maps**: one for A = 0 (minterms 0 to 15) and one for A = 1 (minterms 16 to 31). In each half, the rows are BC and the columns are DE.
 
-![Lecture 04, Slide 13 — Five-variable map made of two four-variable maps for A = 0 and A = 1](../images/L04_p13.png)
+![Figure 14. Five-variable map made of two four-variable maps for A = 0 and A = 1 (slide 13)](../images/L04_p13.png)
 
-*Lecture 04, Slide 13 — Five-variable map made of two four-variable maps for A = 0 and A = 1*
+*Figure 14. Five-variable map made of two four-variable maps for A = 0 and A = 1 (slide 13)*
 
 - Within each half, adjacency works exactly as in a four-variable map.
 - In addition, **squares in the same position of the two halves are adjacent**, because they differ only in A. For example, minterm 5 (A = 0) and minterm 21 (A = 1) are adjacent.
@@ -351,9 +351,9 @@ The 1s of a map give a minimal **sum of products**. The **0s** of the map repres
 
 **Example 1: F(A, B, C, D) = Σ(0, 1, 2, 5, 8, 9, 10).**
 
-![Lecture 04, Slide 14 — Simplification of F = Σ(0, 1, 2, 5, 8, 9, 10) as a sum of products and as a product of sums](../images/L04_p14.png)
+![Figure 15. Simplification of F = Σ(0, 1, 2, 5, 8, 9, 10) as a sum of products and as a product of sums (slide 14)](../images/L04_p14.png)
 
-*Lecture 04, Slide 14 — Simplification of F = Σ(0, 1, 2, 5, 8, 9, 10) as a sum of products and as a product of sums*
+*Figure 15. Simplification of F = Σ(0, 1, 2, 5, 8, 9, 10) as a sum of products and as a product of sums (slide 14)*
 
 **Sum of products (group the 1s).**
 
@@ -374,9 +374,9 @@ The slide summarizes the method in one line: **combine the squares marked '0' in
 
 **Example 2: F(x, y, z) = Σ(1, 3, 4, 6) = Π(0, 2, 5, 7).**
 
-![Lecture 04, Slide 15 — Truth table and map of F = Σ(1, 3, 4, 6)](../images/L04_p15.png)
+![Figure 16. Truth table and map of F = Σ(1, 3, 4, 6) (slide 15)](../images/L04_p15.png)
 
-*Lecture 04, Slide 15 — Truth table and map of F = Σ(1, 3, 4, 6)*
+*Figure 16. Truth table and map of F = Σ(1, 3, 4, 6) (slide 15)*
 
 - Grouping the 1s: m₁, m₃ give **x'z**, and m₄, m₆ (wrap-around) give **xz'**. Therefore **F = x'z + xz'**.
 - Grouping the 0s: m₀, m₂ give x'z', and m₅, m₇ give xz. Therefore F' = xz + x'z'.
@@ -402,9 +402,9 @@ In some applications, certain input combinations **never occur**. For example, a
 
 **Example 1: F(w, x, y) = Σ(0, 1, 4, 6), with don't-care conditions d(w, x, y) = Σ(3, 5, 7).**
 
-![Lecture 04, Slide 17 — Simplification of F = Σ(0, 1, 4, 6) with d = Σ(3, 5, 7)](../images/L04_p17.png)
+![Figure 17. Simplification of F = Σ(0, 1, 4, 6) with d = Σ(3, 5, 7) (slide 17)](../images/L04_p17.png)
 
-*Lecture 04, Slide 17 — Simplification of F = Σ(0, 1, 4, 6) with d = Σ(3, 5, 7)*
+*Figure 17. Simplification of F = Σ(0, 1, 4, 6) with d = Σ(3, 5, 7) (slide 17)*
 
 1. **Insert the don't-care conditions:** write X in squares 3, 5, and 7. Whatever value (1 or 0) these squares take does not matter.
 2. **Insert the function values in the remaining squares:** 1 in squares 0, 1, 4, 6 and 0 in square 2. In the map (rows w, columns xy), the top row reads 1, 1, X, 0 and the bottom row reads 1, X, X, 1.
@@ -416,9 +416,9 @@ In some applications, certain input combinations **never occur**. For example, a
 
 **Example 2: F(w, x, y, z) = Σ(1, 3, 7, 11, 15), with d(w, x, y, z) = Σ(0, 2, 5).**
 
-![Lecture 04, Slide 18 — Two valid simplifications of F = Σ(1, 3, 7, 11, 15) with d = Σ(0, 2, 5)](../images/L04_p18.png)
+![Figure 18. Two valid simplifications of F = Σ(1, 3, 7, 11, 15) with d = Σ(0, 2, 5) (slide 18)](../images/L04_p18.png)
 
-*Lecture 04, Slide 18 — Two valid simplifications of F = Σ(1, 3, 7, 11, 15) with d = Σ(0, 2, 5)*
+*Figure 18. Two valid simplifications of F = Σ(1, 3, 7, 11, 15) with d = Σ(0, 2, 5) (slide 18)*
 
 - The column yz = 11 (m₃, m₇, m₁₅, m₁₁) is all 1s: **yz**.
 - m₁ remains, and there are two equally good ways to cover it.
@@ -456,9 +456,9 @@ Digital circuits are often built with NAND or NOR gates only, because these gate
 
 ### 11.1 NAND Circuits
 
-![Lecture 04, Slide 20 — Logic operations with NAND gates, and the two graphic symbols of the NAND gate](../images/L04_p20.png)
+![Figure 19. Logic operations with NAND gates, and the two graphic symbols of the NAND gate (slide 20)](../images/L04_p20.png)
 
-*Lecture 04, Slide 20 — Logic operations with NAND gates, and the two graphic symbols of the NAND gate*
+*Figure 19. Logic operations with NAND gates, and the two graphic symbols of the NAND gate (slide 20)*
 
 - **Inverter:** a NAND gate with its inputs tied together outputs x'.
 - **AND:** a NAND gate followed by a NAND inverter outputs ((xy)')' = xy.
@@ -475,9 +475,9 @@ Both symbols describe exactly the same gate. Choosing the right symbol in each p
 
 **Example:** F = AB + CD = ((AB)'(CD)')'.
 
-![Lecture 04, Slide 21 — Three ways to implement F = AB + CD](../images/L04_p21.png)
+![Figure 20. Three ways to implement F = AB + CD (slide 21)](../images/L04_p21.png)
 
-*Lecture 04, Slide 21 — Three ways to implement F = AB + CD*
+*Figure 20. Three ways to implement F = AB + CD (slide 21)*
 
 - (a) The original **AND-OR** circuit.
 - (b) The AND gates are replaced by NAND gates (AND-invert), and the OR gate by an **invert-OR** symbol. The bubble at each NAND output and the bubble at the corresponding OR input cancel each other, so the function is unchanged.
@@ -489,9 +489,9 @@ Both symbols describe exactly the same gate. Choosing the right symbol in each p
 
 **Example:** F(x, y, z) = Σ(1, 2, 3, 4, 5, 7).
 
-![Lecture 04, Slide 22 — Simplifying F = Σ(1, 2, 3, 4, 5, 7) and implementing it with NAND gates](../images/L04_p22.png)
+![Figure 21. Simplifying F = Σ(1, 2, 3, 4, 5, 7) and implementing it with NAND gates (slide 22)](../images/L04_p22.png)
 
-*Lecture 04, Slide 22 — Simplifying F = Σ(1, 2, 3, 4, 5, 7) and implementing it with NAND gates*
+*Figure 21. Simplifying F = Σ(1, 2, 3, 4, 5, 7) and implementing it with NAND gates (slide 22)*
 
 1. **Simplify with the map (a):** m₄, m₅ give **xy'**; m₂, m₃ give **x'y**; m₁, m₃, m₅, m₇ (the columns where z = 1) give **z**. Therefore F = xy' + x'y + z.
 2. **Draw with AND-invert and invert-OR symbols (b):** the two product terms go through NAND gates into an invert-OR gate. The single literal z enters the OR level directly, so its input bubble must be compensated by an inverter in front of it.
@@ -503,9 +503,9 @@ Both symbols describe exactly the same gate. Choosing the right symbol in each p
 
 **Example:** F = A(CD + B) + BC'.
 
-![Lecture 04, Slide 23 — Multilevel implementation of F = A(CD + B) + BC' with AND-OR gates and with NAND gates](../images/L04_p23.png)
+![Figure 22. Multilevel implementation of F = A(CD + B) + BC' with AND-OR gates and with NAND gates (slide 23)](../images/L04_p23.png)
 
-*Lecture 04, Slide 23 — Multilevel implementation of F = A(CD + B) + BC' with AND-OR gates and with NAND gates*
+*Figure 22. Multilevel implementation of F = A(CD + B) + BC' with AND-OR gates and with NAND gates (slide 23)*
 
 - (a) **AND-OR gates:** CD is formed by an AND gate, ORed with B, ANDed with A, and finally ORed with BC'. The levels alternate AND, OR, AND, OR.
 - (b) **NAND gates:** every AND gate is replaced by an AND-invert (NAND) symbol and every OR gate by an invert-OR (NAND) symbol, so that each output bubble meets an input bubble on the next gate and cancels.
@@ -518,9 +518,9 @@ Both symbols describe exactly the same gate. Choosing the right symbol in each p
 
 The NOR gate is the dual of the NAND gate, so all the procedures are dual.
 
-![Lecture 04, Slide 24 — Logic operations with NOR gates, and the two graphic symbols of the NOR gate](../images/L04_p24.png)
+![Figure 23. Logic operations with NOR gates, and the two graphic symbols of the NOR gate (slide 24)](../images/L04_p24.png)
 
-*Lecture 04, Slide 24 — Logic operations with NOR gates, and the two graphic symbols of the NOR gate*
+*Figure 23. Logic operations with NOR gates, and the two graphic symbols of the NOR gate (slide 24)*
 
 - **Inverter:** a NOR gate with its inputs tied together outputs x'.
 - **OR:** a NOR gate followed by a NOR inverter outputs x + y.
@@ -533,9 +533,9 @@ The NOR gate is the dual of the NAND gate, so all the procedures are dual.
 
 **Example 1:** F = (A + B)(C + D)E.
 
-![Lecture 04, Slide 25 — Implementation of F = (A + B)(C + D)E with NOR gates](../images/L04_p25a.png)
+![Figure 24. Implementation of F = (A + B)(C + D)E with NOR gates (slide 25)](../images/L04_p25a.png)
 
-*Lecture 04, Slide 25 — Implementation of F = (A + B)(C + D)E with NOR gates*
+*Figure 24. Implementation of F = (A + B)(C + D)E with NOR gates (slide 25)*
 
 - Two NOR gates produce (A + B)' and (C + D)'.
 - The output gate is drawn as **invert-AND** (a NOR gate): its input bubbles turn (A + B)' and (C + D)' back into (A + B) and (C + D), and they turn the third input E' into E.
@@ -543,9 +543,9 @@ The NOR gate is the dual of the NAND gate, so all the procedures are dual.
 
 **Example 2:** F = (AB' + A'B)(C + D').
 
-![Lecture 04, Slide 25 — Implementation of F = (AB' + A'B)(C + D') with NOR gates](../images/L04_p25b.png)
+![Figure 25. Implementation of F = (AB' + A'B)(C + D') with NOR gates (slide 25)](../images/L04_p25b.png)
 
-*Lecture 04, Slide 25 — Implementation of F = (AB' + A'B)(C + D') with NOR gates*
+*Figure 25. Implementation of F = (AB' + A'B)(C + D') with NOR gates (slide 25)*
 
 - The two invert-AND gates (NOR gates) with inputs A', B and A, B' produce (A' + B)' = AB' and (A + B')' = A'B.
 - A NOR gate combines them into (AB' + A'B)'.
@@ -581,9 +581,9 @@ The exclusive-OR (XOR) and its complement, the exclusive-NOR, are defined as fol
 | A ⊕ B = B ⊕ A | Commutative |
 | (A ⊕ B) ⊕ C = A ⊕ (B ⊕ C) = A ⊕ B ⊕ C | Associative |
 
-![Lecture 04, Slide 26 — Exclusive-OR implemented with AND-OR-NOT gates and with NAND gates](../images/L04_p26.png)
+![Figure 26. Exclusive-OR implemented with AND-OR-NOT gates and with NAND gates (slide 26)](../images/L04_p26.png)
 
-*Lecture 04, Slide 26 — Exclusive-OR implemented with AND-OR-NOT gates and with NAND gates*
+*Figure 26. Exclusive-OR implemented with AND-OR-NOT gates and with NAND gates (slide 26)*
 
 - (a) **AND-OR-NOT:** two inverters produce x' and y', two AND gates produce xy' and x'y, and an OR gate combines them.
 - (b) **Four NAND gates:** the first NAND gate produces n = (xy)'. The two middle NAND gates produce (xn)' and (yn)', and the output NAND gate produces ((xn)'(yn)')' = xn + yn = (x + y)(xy)' = (x + y)(x' + y') = xy' + x'y. No separate inverters are needed.
@@ -592,9 +592,9 @@ The exclusive-OR (XOR) and its complement, the exclusive-NOR, are defined as fol
 
 A three-input XOR, A ⊕ B ⊕ C, equals 1 when an **odd number** of the inputs are 1. It is therefore called the **odd function**. Its complement equals 1 when an **even number** of the inputs are 1 and is called the **even function**.
 
-![Lecture 04, Slide 27 — Maps and circuits of the three-input odd and even functions](../images/L04_p27.png)
+![Figure 27. Maps and circuits of the three-input odd and even functions (slide 27)](../images/L04_p27.png)
 
-*Lecture 04, Slide 27 — Maps and circuits of the three-input odd and even functions*
+*Figure 27. Maps and circuits of the three-input odd and even functions (slide 27)*
 
 - **Odd function F = A ⊕ B ⊕ C = Σ(1, 2, 4, 7).** The input patterns of these minterms, written as ABC, are 001, 010, 100, and 111: each contains an odd number of 1s.
 - **Even function F = (A ⊕ B ⊕ C)' = Σ(0, 3, 5, 6).** The patterns are 000, 011, 101, and 110: each contains an even number of 1s.
@@ -606,9 +606,9 @@ A three-input XOR, A ⊕ B ⊕ C, equals 1 when an **odd number** of the inputs 
 
 A **parity bit** is an extra bit attached to a message so that the total number of 1s is even (**even parity**) or odd (**odd parity**). It is used to detect errors during transmission.
 
-![Lecture 04, Slide 28 — Three-bit even-parity generator and four-bit even-parity checker](../images/L04_p28.png)
+![Figure 28. Three-bit even-parity generator and four-bit even-parity checker (slide 28)](../images/L04_p28.png)
 
-*Lecture 04, Slide 28 — Three-bit even-parity generator and four-bit even-parity checker*
+*Figure 28. Three-bit even-parity generator and four-bit even-parity checker (slide 28)*
 
 **Generator.** For a 3-bit message xyz, the even-parity bit P makes the total number of 1s in the four bits even. P must be 1 exactly when the message itself has an odd number of 1s, so **P = x ⊕ y ⊕ z**.
 

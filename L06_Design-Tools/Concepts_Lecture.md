@@ -1,6 +1,6 @@
 # Lecture 06 — Design Tools: Quartus Prime and ModelSim
 
-> **Last Updated:** 2026-10-07
+> **Last Updated:** 2026-10-08
 >
 > Digital Design, Mano and Ciletti - Ch 4
 
@@ -85,9 +85,9 @@ The slides show the Intel home page with the **Support** menu and the **My Intel
 
 ### 2.2 Selecting the Edition and Release
 
-![Lecture 06, Slide 7 — Selecting Quartus Prime Lite Edition, release 18.1](../images/L06_p07.png)
+![Figure 1. Selecting Quartus Prime Lite Edition, release 18.1 (slide 7)](../images/L06_p07.png)
 
-*Lecture 06, Slide 7 — Selecting Quartus Prime Lite Edition, release 18.1*
+*Figure 1. Selecting Quartus Prime Lite Edition, release 18.1 (slide 7)*
 
 - The **Design Software** list offers Quartus Prime Pro Edition, Quartus Prime Standard Edition, **Quartus Prime Lite Edition**, Intel FPGA IP Library, ModelSim-Intel FPGA, ModelSim-Intel FPGA Starter, and Nios II EDS Legacy Tools. Select **Quartus Prime Lite Edition**.
 - Set **Select edition: Lite** and **Select release: 18.1** (released September 2018).
@@ -102,9 +102,9 @@ The slides show the Intel home page with the **Support** menu and the **My Intel
 
 ### 2.3 Selecting the Files
 
-![Lecture 06, Slide 8 — Selecting the files to download in the Individual Files tab](../images/L06_p08.png)
+![Figure 2. Selecting the files to download in the Individual Files tab (slide 8)](../images/L06_p08.png)
 
-*Lecture 06, Slide 8 — Selecting the files to download in the Individual Files tab*
+*Figure 2. Selecting the files to download in the Individual Files tab (slide 8)*
 
 In the **Individual Files** tab, check the following and click **Download Selected Files**.
 
@@ -133,24 +133,24 @@ The following steps install ModelSim from the installer file **ModelSimSetup-18.
 1. **Run the installer** by double-clicking it. The setup wizard for "ModelSim - Intel FPGA Edition or Starter Edition 10.5b (Quartus Prime 18.1.0.625)" opens; click **Next**.
 2. **Select ModelSim - Intel FPGA Starter Edition.** No license is required for the Starter Edition, while the Intel FPGA Edition requires a license.
 
-![Lecture 06, Slide 12 — Selecting the Starter Edition, which requires no license](../images/L06_p12.png)
+![Figure 3. Selecting the Starter Edition, which requires no license (slide 12)](../images/L06_p12.png)
 
-*Lecture 06, Slide 12 — Selecting the Starter Edition, which requires no license*
+*Figure 3. Selecting the Starter Edition, which requires no license (slide 12)*
 
 3. **Accept the license agreement** ("I accept the agreement") and click **Next**.
 4. **Set the installation directory.** If possible, do not change it and keep the default environment (C:\intelFPGA\18.1).
 
-![Lecture 06, Slide 14 — Keeping the default installation directory](../images/L06_p14.png)
+![Figure 4. Keeping the default installation directory (slide 14)](../images/L06_p14.png)
 
-*Lecture 06, Slide 14 — Keeping the default installation directory*
+*Figure 4. Keeping the default installation directory (slide 14)*
 
 5. On the **Summary** page, click **Next** to install. A progress bar shows the installation.
 6. Click **Finish** to complete the installation.
 7. **Check the installation:** in the Windows Start menu, find **Intel FPGA 18.1.0.625 → ModelSim - Intel FPGA Starter Edition** and click it to run.
 
-![Lecture 06, Slide 18 — ModelSim main window at startup](../images/L06_p18.png)
+![Figure 5. ModelSim main window at startup (slide 18)](../images/L06_p18.png)
 
-*Lecture 06, Slide 18 — ModelSim main window at startup*
+*Figure 5. ModelSim main window at startup (slide 18)*
 
 The main window shows the **Library** pane, which lists the precompiled simulation libraries for Intel FPGA families (220model, altera, arriaii, and so on), and the **Transcript** pane at the bottom, where messages appear and commands can be typed. A welcome dialog ("Welcome to version 10.5b") also appears at the first start.
 
@@ -166,9 +166,9 @@ A **project** groups the source files of one design together with its settings.
 
 **Step 1. Start ModelSim and create a project.**
 
-![Lecture 06, Slide 19 — Starting ModelSim and selecting File, New, Project](../images/L06_p19.png)
+![Figure 6. Starting ModelSim and selecting File, New, Project (slide 19)](../images/L06_p19.png)
 
-*Lecture 06, Slide 19 — Starting ModelSim and selecting File, New, Project*
+*Figure 6. Starting ModelSim and selecting File, New, Project (slide 19)*
 
 - <1> Run ModelSim from its desktop or Start menu icon.
 - <2> In the welcome dialog, check **"Don't show this dialog again"** and click **Close**.
@@ -178,9 +178,9 @@ The screenshots on this slide come from an older ModelSim version (PE Student Ed
 
 **Step 2. Set the project properties.**
 
-![Lecture 06, Slide 20 — The Create Project dialog](../images/L06_p20.png)
+![Figure 7. The Create Project dialog (slide 20)](../images/L06_p20.png)
 
-*Lecture 06, Slide 20 — The Create Project dialog*
+*Figure 7. The Create Project dialog (slide 20)*
 
 - **Project Name:** and2.
 - **Project Location:** the directory in which the project is saved (for example, D:/Digital/and_test).
@@ -190,9 +190,9 @@ The screenshots on this slide come from an older ModelSim version (PE Student Ed
 
 **Step 3. Add source files to the project.**
 
-![Lecture 06, Slide 21 — The Add items to the Project dialog](../images/L06_p21.png)
+![Figure 8. The Add items to the Project dialog (slide 21)](../images/L06_p21.png)
 
-*Lecture 06, Slide 21 — The Add items to the Project dialog*
+*Figure 8. The Add items to the Project dialog (slide 21)*
 
 | Option | Meaning |
 |:-------|:--------|
@@ -211,17 +211,17 @@ The screenshots on this slide come from an older ModelSim version (PE Student Ed
 
 **Step 1.** Select **Create New File**, enter the **File Name** and2, choose **Verilog** for "Add file as type," keep the folder **Top Level**, and click **OK**. The Verilog file extension **.v** is added automatically.
 
-![Lecture 06, Slide 22 — Creating the Verilog file and2](../images/L06_p22.png)
+![Figure 9. Creating the Verilog file and2 (slide 22)](../images/L06_p22.png)
 
-*Lecture 06, Slide 22 — Creating the Verilog file and2*
+*Figure 9. Creating the Verilog file and2 (slide 22)*
 
 **Step 2.** The file **and2.v** appears in the **Project** pane. Its **Status** is "?", which means that the file has not been compiled yet; the **Type** is Verilog and the compile **Order** is 0.
 
 **Step 3.** Right-click the created source file and select **Edit**, or double-click the file. An editor opens on the right, where the code is written.
 
-![Lecture 06, Slide 24 — Opening the source file with Edit](../images/L06_p24.png)
+![Figure 10. Opening the source file with Edit (slide 24)](../images/L06_p24.png)
 
-*Lecture 06, Slide 24 — Opening the source file with Edit*
+*Figure 10. Opening the source file with Edit (slide 24)*
 
 ### 5.2 Source Code of the AND Gate
 
@@ -242,9 +242,9 @@ endmodule
 
 After writing the code, **save** the file with the save button in the toolbar.
 
-![Lecture 06, Slide 27 — Saving the file after writing the code](../images/L06_p27.png)
+![Figure 11. Saving the file after writing the code (slide 27)](../images/L06_p27.png)
 
-*Lecture 06, Slide 27 — Saving the file after writing the code*
+*Figure 11. Saving the file after writing the code (slide 27)*
 
 ---
 
@@ -256,15 +256,15 @@ After writing the code, **save** the file with the save button in the toolbar.
 
 **Step 1.** Right-click in the Project pane and select **Add to Project → New File**.
 
-![Lecture 06, Slide 28 — Selecting Add to Project, New File](../images/L06_p28.png)
+![Figure 12. Selecting Add to Project, New File (slide 28)](../images/L06_p28.png)
 
-*Lecture 06, Slide 28 — Selecting Add to Project, New File*
+*Figure 12. Selecting Add to Project, New File (slide 28)*
 
 **Step 2.** Create a new source file with the **File Name** tb_and2. The project now contains two files: and2.v (Order 0) and tb_and2.v (Order 1).
 
-![Lecture 06, Slide 29 — Creating the test bench file tb_and2](../images/L06_p29.png)
+![Figure 13. Creating the test bench file tb_and2 (slide 29)](../images/L06_p29.png)
 
-*Lecture 06, Slide 29 — Creating the test bench file tb_and2*
+*Figure 13. Creating the test bench file tb_and2 (slide 29)*
 
 ### 6.2 Source Code of the Test Bench
 
@@ -326,9 +326,9 @@ Compiling checks the syntax of the Verilog files and stores their compiled form 
 2. Select **Compile → Compile Selected**.
 3. Check that the status of the file changes from **"?"** to a green **check mark**.
 
-![Lecture 06, Slide 32 — Compiling with Compile, Compile Selected](../images/L06_p32.png)
+![Figure 14. Compiling with Compile, Compile Selected (slide 32)](../images/L06_p32.png)
 
-*Lecture 06, Slide 32 — Compiling with Compile, Compile Selected*
+*Figure 14. Compiling with Compile, Compile Selected (slide 32)*
 
 The Compile submenu also offers **Compile All** (all files in the project), **Compile Out-of-Date** (only files changed since the last compilation), and **Compile Order** (the order in which files are compiled).
 
@@ -336,17 +336,17 @@ The Compile submenu also offers **Compile All** (all files in the project), **Co
 
 Select the file to compile and click the **Compile** shortcut button in the toolbar.
 
-![Lecture 06, Slide 33 — The Compile shortcut button in the toolbar](../images/L06_p33.png)
+![Figure 15. The Compile shortcut button in the toolbar (slide 33)](../images/L06_p33.png)
 
-*Lecture 06, Slide 33 — The Compile shortcut button in the toolbar*
+*Figure 15. The Compile shortcut button in the toolbar (slide 33)*
 
 ### 7.3 Checking the Compile Result
 
 The result is printed in the **Transcript** pane.
 
-![Lecture 06, Slide 34 — Transcript messages for a successful and a failed compilation](../images/L06_p34.png)
+![Figure 16. Transcript messages for a successful and a failed compilation (slide 34)](../images/L06_p34.png)
 
-*Lecture 06, Slide 34 — Transcript messages for a successful and a failed compilation*
+*Figure 16. Transcript messages for a successful and a failed compilation (slide 34)*
 
 - **Successful compilation:** green messages such as `# Compile of tb_and2.v was successful.` and `# Compile of and2.v was successful.`
 - **Failed compilation:** a red message such as `# Compile of tb_and2.v failed with 1 errors.`
@@ -359,15 +359,15 @@ The result is printed in the **Transcript** pane.
 
 **Step 1. Turn on the compiler output.** Right-click in the Project pane, select **Project Settings**, check **Display compiler output**, and click **OK**. (It is recommended to uncheck it again later, once the error messages are no longer needed.) In the Project pane, a file that failed to compile is marked with a red **X**, while a successful file has a green check mark.
 
-![Lecture 06, Slide 35 — Enabling Display compiler output in Project Settings](../images/L06_p35.png)
+![Figure 17. Enabling Display compiler output in Project Settings (slide 35)](../images/L06_p35.png)
 
-*Lecture 06, Slide 35 — Enabling Display compiler output in Project Settings*
+*Figure 17. Enabling Display compiler output in Project Settings (slide 35)*
 
 **Step 2. Read the error message.** When a compile error occurs, double-click the red error message in the Transcript. A window titled "Unsuccessful Compile" shows the details.
 
-![Lecture 06, Slide 36 — Locating the error from the compiler message and correcting the code](../images/L06_p36.png)
+![Figure 18. Locating the error from the compiler message and correcting the code (slide 36)](../images/L06_p36.png)
 
-*Lecture 06, Slide 36 — Locating the error from the compiler message and correcting the code*
+*Figure 18. Locating the error from the compiler message and correcting the code (slide 36)*
 
 ```plaintext
 vlog -work work -stats=none D:/Digital/and_test/tb_and2.v
@@ -392,23 +392,23 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct 5
 
 **Step 1.** Select **tb_and2**, then choose **Simulate → Start Simulation**, or click the Start Simulation button in the toolbar.
 
-![Lecture 06, Slide 37 — Selecting Simulate, Start Simulation](../images/L06_p37.png)
+![Figure 19. Selecting Simulate, Start Simulation (slide 37)](../images/L06_p37.png)
 
-*Lecture 06, Slide 37 — Selecting Simulate, Start Simulation*
+*Figure 19. Selecting Simulate, Start Simulation (slide 37)*
 
 **Step 2.** In the **Design** tab of the Start Simulation dialog, expand the **work** library, select **tb_and2**, change the **Resolution** to **ns**, and click **OK**. The Design Unit(s) field then shows work.tb_and2.
 
-![Lecture 06, Slide 38 — Selecting tb_and2 in the Design tab and setting the resolution to ns](../images/L06_p38.png)
+![Figure 20. Selecting tb_and2 in the Design tab and setting the resolution to ns (slide 38)](../images/L06_p38.png)
 
-*Lecture 06, Slide 38 — Selecting tb_and2 in the Design tab and setting the resolution to ns*
+*Figure 20. Selecting tb_and2 in the Design tab and setting the resolution to ns (slide 38)*
 
 > **Key Point:** The module to simulate is the **test bench** (tb_and2), not the design (and2). The test bench is the top of the simulation hierarchy: it contains the design as the instance u0 and supplies its inputs. Simulating and2 alone would leave its inputs undriven.
 
 **Step 3.** ModelSim switches to the simulation layout.
 
-![Lecture 06, Slide 39 — The simulation layout after loading tb_and2](../images/L06_p39.png)
+![Figure 21. The simulation layout after loading tb_and2 (slide 39)](../images/L06_p39.png)
 
-*Lecture 06, Slide 39 — The simulation layout after loading tb_and2*
+*Figure 21. The simulation layout after loading tb_and2 (slide 39)*
 
 - The **sim** pane shows the instance hierarchy: tb_and2 contains the instance **u0** (design unit and2) and the process #INITIAL#9 (the `initial` block that starts on line 9 of the test bench).
 - The **Objects** pane shows the signals of the selected instance: x and y (Net, In) and s (Net, Out). Their values are **StX** (strong unknown), because the simulation has not run yet.
@@ -418,15 +418,15 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct 5
 
 **Step 4.** Right-click the instance **u0** and click **Add Wave** (shortcut Ctrl+W).
 
-![Lecture 06, Slide 40 — Adding the signals of u0 to the wave window](../images/L06_p40.png)
+![Figure 22. Adding the signals of u0 to the wave window (slide 40)](../images/L06_p40.png)
 
-*Lecture 06, Slide 40 — Adding the signals of u0 to the wave window*
+*Figure 22. Adding the signals of u0 to the wave window (slide 40)*
 
 **Step 5.** A **Wave** window is created, listing /tb_and2/u0/x, /tb_and2/u0/y, and /tb_and2/u0/s. No waveform is drawn yet, because the simulation time is still 0 ns.
 
-![Lecture 06, Slide 41 — The wave window before running the simulation](../images/L06_p41.png)
+![Figure 23. The wave window before running the simulation (slide 41)](../images/L06_p41.png)
 
-*Lecture 06, Slide 41 — The wave window before running the simulation*
+*Figure 23. The wave window before running the simulation (slide 41)*
 
 ### 9.3 Running and Reading the Waveform
 
@@ -435,17 +435,17 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct 5
 - Click the **run** button in the toolbar. Each click advances the simulation by the **run length** shown in the box next to it (100 ns by default), and this time can be changed.
 - Alternatively, type the command directly in the Transcript (script) window, for example `run 1000ns`.
 
-![Lecture 06, Slide 42 — Running the simulation from the toolbar or with the run command](../images/L06_p42.png)
+![Figure 24. Running the simulation from the toolbar or with the run command (slide 42)](../images/L06_p42.png)
 
-*Lecture 06, Slide 42 — Running the simulation from the toolbar or with the run command*
+*Figure 24. Running the simulation from the toolbar or with the run command (slide 42)*
 
 Since the last input change of the test bench happens at 750 ns, the simulation must run for more than 750 ns to show all four cases; `run 1000ns` covers them in one step.
 
 **Step 7. Check the result.** The result of the AND gate can be confirmed in the wave window.
 
-![Lecture 06, Slide 43 — Simulation result of the AND gate](../images/L06_p43.png)
+![Figure 25. Simulation result of the AND gate (slide 43)](../images/L06_p43.png)
 
-*Lecture 06, Slide 43 — Simulation result of the AND gate*
+*Figure 25. Simulation result of the AND gate (slide 43)*
 
 | Time (ns) | x | y | s |
 |:---------:|:-:|:-:|:-:|

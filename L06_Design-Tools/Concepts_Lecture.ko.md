@@ -1,6 +1,6 @@
 # 강의 06 — 설계 도구: Quartus Prime과 ModelSim
 
-> **최종 수정일:** 2026-10-07
+> **최종 수정일:** 2026-10-08
 >
 > Digital Design, Mano and Ciletti - Ch 4
 
@@ -85,9 +85,9 @@ ModelSim 설치는 3절에서 설명하며, 강의의 나머지 부분에서는 
 
 ### 2.2 에디션과 릴리스 선택
 
-![Lecture 06, Slide 7 — Quartus Prime Lite Edition 릴리스 18.1 선택](../images/L06_p07.png)
+![그림 1. Quartus Prime Lite Edition 릴리스 18.1 선택 (슬라이드 7)](../images/L06_p07.png)
 
-*Lecture 06, Slide 7 — Quartus Prime Lite Edition 릴리스 18.1 선택*
+*그림 1. Quartus Prime Lite Edition 릴리스 18.1 선택 (슬라이드 7)*
 
 - **Design Software** 목록에는 Quartus Prime Pro Edition, Quartus Prime Standard Edition, **Quartus Prime Lite Edition**, Intel FPGA IP Library, ModelSim-Intel FPGA, ModelSim-Intel FPGA Starter, Nios II EDS Legacy Tools가 있다. **Quartus Prime Lite Edition**을 선택한다.
 - **Select edition: Lite**와 **Select release: 18.1**(2018년 9월 릴리스)을 설정한다.
@@ -102,9 +102,9 @@ ModelSim 설치는 3절에서 설명하며, 강의의 나머지 부분에서는 
 
 ### 2.3 파일 선택
 
-![Lecture 06, Slide 8 — Individual Files 탭에서 다운로드할 파일 선택](../images/L06_p08.png)
+![그림 2. Individual Files 탭에서 다운로드할 파일 선택 (슬라이드 8)](../images/L06_p08.png)
 
-*Lecture 06, Slide 8 — Individual Files 탭에서 다운로드할 파일 선택*
+*그림 2. Individual Files 탭에서 다운로드할 파일 선택 (슬라이드 8)*
 
 **Individual Files** 탭에서 다음 항목을 체크하고 **Download Selected Files**를 클릭한다.
 
@@ -133,24 +133,24 @@ ModelSim 설치는 3절에서 설명하며, 강의의 나머지 부분에서는 
 1. 설치파일을 **더블클릭하여 실행**한다. "ModelSim - Intel FPGA Edition or Starter Edition 10.5b (Quartus Prime 18.1.0.625)" 설치 마법사가 열리면 **Next**를 클릭한다.
 2. **ModelSim - Intel FPGA Starter Edition을 선택**한다. Starter Edition은 라이선스가 필요 없지만, Intel FPGA Edition은 라이선스가 필요하다.
 
-![Lecture 06, Slide 12 — 라이선스가 필요 없는 Starter Edition 선택](../images/L06_p12.png)
+![그림 3. 라이선스가 필요 없는 Starter Edition 선택 (슬라이드 12)](../images/L06_p12.png)
 
-*Lecture 06, Slide 12 — 라이선스가 필요 없는 Starter Edition 선택*
+*그림 3. 라이선스가 필요 없는 Starter Edition 선택 (슬라이드 12)*
 
 3. **라이선스에 동의**("I accept the agreement")하고 **Next**를 클릭한다.
 4. **설치 디렉터리를 설정**한다. 가급적 변경하지 말고 기본 환경(C:\intelFPGA\18.1)으로 세팅한다.
 
-![Lecture 06, Slide 14 — 기본 설치 디렉터리 유지](../images/L06_p14.png)
+![그림 4. 기본 설치 디렉터리 유지 (슬라이드 14)](../images/L06_p14.png)
 
-*Lecture 06, Slide 14 — 기본 설치 디렉터리 유지*
+*그림 4. 기본 설치 디렉터리 유지 (슬라이드 14)*
 
 5. **Summary** 페이지에서 **Next**를 클릭하면 설치가 진행되며, 진행 막대가 표시된다.
 6. 최종적으로 **Finish**를 클릭하면 설치가 완료된다.
 7. **설치를 확인**한다. 윈도우 시작 메뉴에서 **Intel FPGA 18.1.0.625 → ModelSim - Intel FPGA Starter Edition**을 찾아 클릭하여 실행한다.
 
-![Lecture 06, Slide 18 — 시작할 때의 ModelSim 주 화면](../images/L06_p18.png)
+![그림 5. 시작할 때의 ModelSim 주 화면 (슬라이드 18)](../images/L06_p18.png)
 
-*Lecture 06, Slide 18 — 시작할 때의 ModelSim 주 화면*
+*그림 5. 시작할 때의 ModelSim 주 화면 (슬라이드 18)*
 
 주 화면에는 Intel FPGA 제품군용으로 미리 컴파일된 시뮬레이션 라이브러리(220model, altera, arriaii 등)를 나열하는 **Library** 창과, 메시지가 표시되고 명령어를 입력할 수 있는 아래쪽의 **Transcript** 창이 있다. 처음 시작할 때는 환영 대화 상자("Welcome to version 10.5b")도 나타난다.
 
@@ -166,9 +166,9 @@ ModelSim 설치는 3절에서 설명하며, 강의의 나머지 부분에서는 
 
 **Step 1. ModelSim을 실행하고 프로젝트를 만든다.**
 
-![Lecture 06, Slide 19 — ModelSim 실행 후 File, New, Project 선택](../images/L06_p19.png)
+![그림 6. ModelSim 실행 후 File, New, Project 선택 (슬라이드 19)](../images/L06_p19.png)
 
-*Lecture 06, Slide 19 — ModelSim 실행 후 File, New, Project 선택*
+*그림 6. ModelSim 실행 후 File, New, Project 선택 (슬라이드 19)*
 
 - <1> 바탕 화면이나 시작 메뉴의 아이콘으로 ModelSim을 실행한다.
 - <2> 환영 대화 상자에서 **"Don't show this dialog again"** 을 체크하고 **Close**를 클릭한다.
@@ -178,9 +178,9 @@ ModelSim 설치는 3절에서 설명하며, 강의의 나머지 부분에서는 
 
 **Step 2. 프로젝트 속성을 설정한다.**
 
-![Lecture 06, Slide 20 — Create Project 대화 상자](../images/L06_p20.png)
+![그림 7. Create Project 대화 상자 (슬라이드 20)](../images/L06_p20.png)
 
-*Lecture 06, Slide 20 — Create Project 대화 상자*
+*그림 7. Create Project 대화 상자 (슬라이드 20)*
 
 - **Project Name:** and2로 설정한다.
 - **Project Location:** 프로젝트를 저장할 디렉터리를 선택한다(예: D:/Digital/and_test).
@@ -190,9 +190,9 @@ ModelSim 설치는 3절에서 설명하며, 강의의 나머지 부분에서는 
 
 **Step 3. 프로젝트에 소스 파일을 추가한다.**
 
-![Lecture 06, Slide 21 — Add items to the Project 대화 상자](../images/L06_p21.png)
+![그림 8. Add items to the Project 대화 상자 (슬라이드 21)](../images/L06_p21.png)
 
-*Lecture 06, Slide 21 — Add items to the Project 대화 상자*
+*그림 8. Add items to the Project 대화 상자 (슬라이드 21)*
 
 | 선택 항목 | 의미 |
 |:-------|:--------|
@@ -211,17 +211,17 @@ ModelSim 설치는 3절에서 설명하며, 강의의 나머지 부분에서는 
 
 **Step 1.** **Create New File**을 선택하고, **File Name**을 and2로 설정한 뒤, "Add file as type"에서 **Verilog**를 선택하고, 폴더는 **Top Level**로 두고 **OK**를 클릭한다. Verilog 파일의 확장자 **.v**는 자동으로 생성된다.
 
-![Lecture 06, Slide 22 — Verilog 파일 and2 생성](../images/L06_p22.png)
+![그림 9. Verilog 파일 and2 생성 (슬라이드 22)](../images/L06_p22.png)
 
-*Lecture 06, Slide 22 — Verilog 파일 and2 생성*
+*그림 9. Verilog 파일 and2 생성 (슬라이드 22)*
 
 **Step 2.** **Project** 창에 파일 **and2.v**가 나타난다. **Status**는 "?"로, 파일이 아직 컴파일되지 않았다는 뜻이다. **Type**은 Verilog이고, 컴파일 **Order**는 0이다.
 
 **Step 3.** 생성된 소스 파일을 우클릭하여 **Edit**을 실행하거나 더블클릭한다. 오른쪽에 편집기가 열리며, 여기에 코드를 작성한다.
 
-![Lecture 06, Slide 24 — Edit으로 소스 파일 열기](../images/L06_p24.png)
+![그림 10. Edit으로 소스 파일 열기 (슬라이드 24)](../images/L06_p24.png)
 
-*Lecture 06, Slide 24 — Edit으로 소스 파일 열기*
+*그림 10. Edit으로 소스 파일 열기 (슬라이드 24)*
 
 ### 5.2 AND 게이트의 소스 코드
 
@@ -242,9 +242,9 @@ endmodule
 
 코드를 작성한 뒤 도구 모음의 저장 버튼으로 파일을 **저장**한다.
 
-![Lecture 06, Slide 27 — 코드 작성 후 저장](../images/L06_p27.png)
+![그림 11. 코드 작성 후 저장 (슬라이드 27)](../images/L06_p27.png)
 
-*Lecture 06, Slide 27 — 코드 작성 후 저장*
+*그림 11. 코드 작성 후 저장 (슬라이드 27)*
 
 ---
 
@@ -256,15 +256,15 @@ endmodule
 
 **Step 1.** Project 창에서 우클릭하여 **Add to Project → New File**을 선택한다.
 
-![Lecture 06, Slide 28 — Add to Project, New File 선택](../images/L06_p28.png)
+![그림 12. Add to Project, New File 선택 (슬라이드 28)](../images/L06_p28.png)
 
-*Lecture 06, Slide 28 — Add to Project, New File 선택*
+*그림 12. Add to Project, New File 선택 (슬라이드 28)*
 
 **Step 2.** **File Name**을 tb_and2로 하여 새로운 소스 파일을 생성한다. 이제 프로젝트에는 and2.v(Order 0)와 tb_and2.v(Order 1) 두 파일이 있다.
 
-![Lecture 06, Slide 29 — 테스트벤치 파일 tb_and2 생성](../images/L06_p29.png)
+![그림 13. 테스트벤치 파일 tb_and2 생성 (슬라이드 29)](../images/L06_p29.png)
 
-*Lecture 06, Slide 29 — 테스트벤치 파일 tb_and2 생성*
+*그림 13. 테스트벤치 파일 tb_and2 생성 (슬라이드 29)*
 
 ### 6.2 테스트벤치의 소스 코드
 
@@ -326,9 +326,9 @@ endmodule
 2. **Compile → Compile Selected**를 선택한다.
 3. 해당 파일의 상태가 **"?"** 에서 초록색 **체크 표시**로 바뀐 것을 확인한다.
 
-![Lecture 06, Slide 32 — Compile, Compile Selected로 컴파일](../images/L06_p32.png)
+![그림 14. Compile, Compile Selected로 컴파일 (슬라이드 32)](../images/L06_p32.png)
 
-*Lecture 06, Slide 32 — Compile, Compile Selected로 컴파일*
+*그림 14. Compile, Compile Selected로 컴파일 (슬라이드 32)*
 
 Compile 하위 메뉴에는 **Compile All**(프로젝트의 모든 파일), **Compile Out-of-Date**(마지막 컴파일 이후 바뀐 파일만), **Compile Order**(파일을 컴파일하는 순서)도 있다.
 
@@ -336,17 +336,17 @@ Compile 하위 메뉴에는 **Compile All**(프로젝트의 모든 파일), **Co
 
 컴파일하고자 하는 파일을 선택하고 도구 모음의 **Compile** 단축 버튼을 클릭한다.
 
-![Lecture 06, Slide 33 — 도구 모음의 Compile 단축 버튼](../images/L06_p33.png)
+![그림 15. 도구 모음의 Compile 단축 버튼 (슬라이드 33)](../images/L06_p33.png)
 
-*Lecture 06, Slide 33 — 도구 모음의 Compile 단축 버튼*
+*그림 15. 도구 모음의 Compile 단축 버튼 (슬라이드 33)*
 
 ### 7.3 컴파일 결과 확인
 
 결과는 **Transcript** 창에 출력된다.
 
-![Lecture 06, Slide 34 — 컴파일 성공 시와 실패 시의 Transcript 메시지](../images/L06_p34.png)
+![그림 16. 컴파일 성공 시와 실패 시의 Transcript 메시지 (슬라이드 34)](../images/L06_p34.png)
 
-*Lecture 06, Slide 34 — 컴파일 성공 시와 실패 시의 Transcript 메시지*
+*그림 16. 컴파일 성공 시와 실패 시의 Transcript 메시지 (슬라이드 34)*
 
 - **컴파일 성공 시:** `# Compile of tb_and2.v was successful.`, `# Compile of and2.v was successful.`과 같은 초록색 메시지가 나타난다.
 - **컴파일 실패 시:** `# Compile of tb_and2.v failed with 1 errors.`와 같은 빨간색 메시지가 나타난다.
@@ -359,15 +359,15 @@ Compile 하위 메뉴에는 **Compile All**(프로젝트의 모든 파일), **Co
 
 **Step 1. 컴파일러 출력을 켠다.** Project 창에서 우클릭하여 **Project Settings**를 선택하고, **Display compiler output**을 체크한 뒤 **OK**를 클릭한다(오류 메시지가 더 이상 필요 없게 되면 나중에 체크를 없애는 것을 권한다). Project 창에서 컴파일에 실패한 파일은 빨간 **X**로, 성공한 파일은 초록색 체크 표시로 나타난다.
 
-![Lecture 06, Slide 35 — Project Settings에서 Display compiler output 활성화](../images/L06_p35.png)
+![그림 17. Project Settings에서 Display compiler output 활성화 (슬라이드 35)](../images/L06_p35.png)
 
-*Lecture 06, Slide 35 — Project Settings에서 Display compiler output 활성화*
+*그림 17. Project Settings에서 Display compiler output 활성화 (슬라이드 35)*
 
 **Step 2. 오류 메시지를 읽는다.** 컴파일 오류가 발생하면 Transcript의 빨간 오류 메시지를 더블클릭한다. "Unsuccessful Compile"이라는 제목의 창에 자세한 내용이 표시된다.
 
-![Lecture 06, Slide 36 — 컴파일러 메시지로 오류 위치를 찾고 코드를 수정](../images/L06_p36.png)
+![그림 18. 컴파일러 메시지로 오류 위치를 찾고 코드를 수정 (슬라이드 36)](../images/L06_p36.png)
 
-*Lecture 06, Slide 36 — 컴파일러 메시지로 오류 위치를 찾고 코드를 수정*
+*그림 18. 컴파일러 메시지로 오류 위치를 찾고 코드를 수정 (슬라이드 36)*
 
 ```plaintext
 vlog -work work -stats=none D:/Digital/and_test/tb_and2.v
@@ -392,23 +392,23 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct 5
 
 **Step 1.** **tb_and2**를 선택한 뒤 **Simulate → Start Simulation**을 실행하거나, 도구 모음의 Start Simulation 버튼을 클릭한다.
 
-![Lecture 06, Slide 37 — Simulate, Start Simulation 선택](../images/L06_p37.png)
+![그림 19. Simulate, Start Simulation 선택 (슬라이드 37)](../images/L06_p37.png)
 
-*Lecture 06, Slide 37 — Simulate, Start Simulation 선택*
+*그림 19. Simulate, Start Simulation 선택 (슬라이드 37)*
 
 **Step 2.** Start Simulation 대화 상자의 **Design** 탭에서 **work** 라이브러리를 펼쳐 **tb_and2**를 선택하고, **Resolution**을 **ns**로 수정한 뒤 **OK**를 실행한다. 그러면 Design Unit(s) 칸에 work.tb_and2가 표시된다.
 
-![Lecture 06, Slide 38 — Design 탭에서 tb_and2를 선택하고 해상도를 ns로 설정](../images/L06_p38.png)
+![그림 20. Design 탭에서 tb_and2를 선택하고 해상도를 ns로 설정 (슬라이드 38)](../images/L06_p38.png)
 
-*Lecture 06, Slide 38 — Design 탭에서 tb_and2를 선택하고 해상도를 ns로 설정*
+*그림 20. Design 탭에서 tb_and2를 선택하고 해상도를 ns로 설정 (슬라이드 38)*
 
 > **핵심:** 시뮬레이션할 모듈은 설계(and2)가 아니라 **테스트벤치**(tb_and2)이다. 테스트벤치는 시뮬레이션 계층의 최상위로, 설계를 인스턴스 u0로 포함하고 그 입력을 공급한다. and2만 시뮬레이션하면 입력이 구동되지 않은 채로 남는다.
 
 **Step 3.** ModelSim이 시뮬레이션 레이아웃으로 바뀐다.
 
-![Lecture 06, Slide 39 — tb_and2를 불러온 뒤의 시뮬레이션 레이아웃](../images/L06_p39.png)
+![그림 21. tb_and2를 불러온 뒤의 시뮬레이션 레이아웃 (슬라이드 39)](../images/L06_p39.png)
 
-*Lecture 06, Slide 39 — tb_and2를 불러온 뒤의 시뮬레이션 레이아웃*
+*그림 21. tb_and2를 불러온 뒤의 시뮬레이션 레이아웃 (슬라이드 39)*
 
 - **sim** 창은 인스턴스 계층을 보여 준다. tb_and2는 인스턴스 **u0**(설계 단위 and2)와 프로세스 #INITIAL#9(테스트벤치 9행에서 시작하는 `initial` 블록)를 포함한다.
 - **Objects** 창은 선택한 인스턴스의 신호를 보여 준다. x와 y(Net, In), s(Net, Out)이다. 아직 시뮬레이션을 실행하지 않았으므로 값은 **StX**(strong unknown)이다.
@@ -418,15 +418,15 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct 5
 
 **Step 4.** 인스턴스 **u0**를 우클릭하고 **Add Wave**(단축키 Ctrl+W)를 클릭한다.
 
-![Lecture 06, Slide 40 — u0의 신호를 파형 창에 추가](../images/L06_p40.png)
+![그림 22. u0의 신호를 파형 창에 추가 (슬라이드 40)](../images/L06_p40.png)
 
-*Lecture 06, Slide 40 — u0의 신호를 파형 창에 추가*
+*그림 22. u0의 신호를 파형 창에 추가 (슬라이드 40)*
 
 **Step 5.** /tb_and2/u0/x, /tb_and2/u0/y, /tb_and2/u0/s를 나열하는 **Wave** 창이 생성된다. 시뮬레이션 시간이 아직 0 ns이므로 파형은 그려지지 않는다.
 
-![Lecture 06, Slide 41 — 시뮬레이션 실행 전의 파형 창](../images/L06_p41.png)
+![그림 23. 시뮬레이션 실행 전의 파형 창 (슬라이드 41)](../images/L06_p41.png)
 
-*Lecture 06, Slide 41 — 시뮬레이션 실행 전의 파형 창*
+*그림 23. 시뮬레이션 실행 전의 파형 창 (슬라이드 41)*
 
 ### 9.3 실행과 파형 읽기
 
@@ -435,17 +435,17 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct 5
 - 도구 모음에서 **run** 버튼을 클릭한다. 클릭할 때마다 옆 칸에 표시된 **실행 시간**(기본값 100 ns)만큼 시뮬레이션이 진행되며, 이 시간은 변경할 수 있다.
 - 또는 Transcript(스크립트) 창에서 명령어를 직접 타이핑한다. 예: `run 1000ns`
 
-![Lecture 06, Slide 42 — 도구 모음 또는 run 명령어로 시뮬레이션 실행](../images/L06_p42.png)
+![그림 24. 도구 모음 또는 run 명령어로 시뮬레이션 실행 (슬라이드 42)](../images/L06_p42.png)
 
-*Lecture 06, Slide 42 — 도구 모음 또는 run 명령어로 시뮬레이션 실행*
+*그림 24. 도구 모음 또는 run 명령어로 시뮬레이션 실행 (슬라이드 42)*
 
 테스트벤치의 마지막 입력 변화가 750 ns에 일어나므로, 네 경우를 모두 보려면 750 ns보다 오래 실행해야 한다. `run 1000ns`를 쓰면 한 번에 모두 볼 수 있다.
 
 **Step 7. 결과를 확인한다.** 파형 창에서 AND 게이트의 결과를 확인할 수 있다.
 
-![Lecture 06, Slide 43 — AND 게이트의 시뮬레이션 결과](../images/L06_p43.png)
+![그림 25. AND 게이트의 시뮬레이션 결과 (슬라이드 43)](../images/L06_p43.png)
 
-*Lecture 06, Slide 43 — AND 게이트의 시뮬레이션 결과*
+*그림 25. AND 게이트의 시뮬레이션 결과 (슬라이드 43)*
 
 | 시간(ns) | x | y | s |
 |:---------:|:-:|:-:|:-:|
